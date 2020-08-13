@@ -56,3 +56,6 @@ build: unit-test
 	 -a -o ./artifacts/svc-unpacked ./cmd/aws-s3-proxy/
 	rm -rf ./artifacts/svc
 	upx -q -o ./artifacts/svc ./artifacts/svc-unpacked
+
+.PHONY: pr-check
+pr-check: lint unit-test

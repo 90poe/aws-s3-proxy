@@ -26,7 +26,7 @@ func WrapHandler(handler func(w http.ResponseWriter, r *http.Request)) http.Hand
 			w.WriteHeader(http.StatusOK)
 			return
 		}
-		// Omiting healtcheck
+		// Omitting healtcheck
 		if c.DebugOutput {
 			log.Printf("[debug]: URI requested %s", r.RequestURI)
 		}
